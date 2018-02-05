@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ CMPUT 301. Assignment 1.
+  ~ SubBook
+  ~
+  ~ Copyright (c) 2018. Yu Kin Law. CMPUT 301. University of Alberta. All rights reserved.
+  -->
+
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+</adaptive-icon>

@@ -1,0 +1,8 @@
+/*
+ * CMPUT 301. Assignment 1.
+ * SubBook
+ *
+ * Copyright (c) 2018. Yu Kin Law. CMPUT 301. University of Alberta. All rights reserved.
+ */
+
+include ':app'
