@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Subscription Saved", Toast.LENGTH_SHORT);
             toast.show();
+            Intent intent = new Intent(this, DisplayActivity.class);
+            startActivity(intent);
         } else {
             /* Error Message */
             Toast toast = Toast.makeText(getApplicationContext(),

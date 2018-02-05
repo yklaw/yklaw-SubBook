@@ -17,7 +17,8 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Subcription"
+        android:text="Add New Subscription"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -26,9 +27,11 @@
 
     <EditText
         android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="53dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -39,11 +42,13 @@
 
     <EditText
         android:id="@+id/date"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Date Started"
+        android:hint="Date Started (YYYY-MM-DD)"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -52,9 +57,11 @@
 
     <EditText
         android:id="@+id/charge"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Monthly Charge"
         android:inputType="textPersonName"
@@ -65,9 +72,11 @@
 
     <EditText
         android:id="@+id/comment"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Comment"
         android:inputType="textPersonName"
@@ -77,30 +86,32 @@
         app:layout_constraintTop_toBottomOf="@+id/charge" />
 
     <Button
-        android:id="@+id/savenewbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="52dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:onClick="saveSub"
         android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/viewsButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comment"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/viewsubsbutton"
-        android:layout_width="wrap_content"
+        android:id="@+id/viewsButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:onClick="viewSub"
         android:text="View List"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/savenewbutton" />
+        app:layout_constraintStart_toEndOf="@+id/saveButton"
+        app:layout_constraintTop_toBottomOf="@+id/comment" />
 
 </android.support.constraint.ConstraintLayout>

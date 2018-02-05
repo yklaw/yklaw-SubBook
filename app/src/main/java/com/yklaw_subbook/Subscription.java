@@ -72,7 +72,7 @@ public class Subscription {
      * @return String containing all 4 data
      */
     public String getSubInfo() {
-        return "Name: " + this.name + "\nDate: " + this.date + "\nCharge: " + this.charge
-                + "\nComment: " + this.comment;
+        return "Name: " + this.name + "\t\t\tDate: " + this.date + "\nCharge: " + this.charge
+                + "\t\t\tComment: " + this.comment;
     }
 }

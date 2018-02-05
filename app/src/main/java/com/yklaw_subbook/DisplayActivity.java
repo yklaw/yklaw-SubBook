@@ -123,6 +123,15 @@ public class DisplayActivity extends AppCompatActivity {
     }
 
     /**
+     * Start Add Activity when Clicked
+     * @param view
+     */
+    public void addSub(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    /**
      * Called when the activity is destroyed
      */
     @Override

@@ -17,6 +17,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
@@ -41,7 +42,7 @@ import com.google.gson.reflect.TypeToken;
  */
 public class EditActivity extends AppCompatActivity {
 
-    private ArrayList<Subscription> subList;
+    private List<Subscription> subList;
     int i;
 
     EditText nameText;
@@ -77,13 +78,13 @@ public class EditActivity extends AppCompatActivity {
 
         // If subList is not empty, retrieve object with location
         if (subList.isEmpty() == false) {
-        Subscription sub = subList.get(i);
+        Subscription tempSub = subList.get(i);
 
-        // Set text from subList
-        nameText.setText(sub.getName());
-        dateText.setText(sub.getDate());
-        chargeText.setText(sub.getCharge());
-        commentText.setText(sub.getComment());
+            // Set text from subList
+            nameText.setText(tempSub.getName());
+            dateText.setText(tempSub.getDate());
+            chargeText.setText(tempSub.getCharge());
+            commentText.setText(tempSub.getComment());
         }
     }
 
@@ -91,7 +92,7 @@ public class EditActivity extends AppCompatActivity {
      * Save subList to file
      */
     private void saveInFile(Subscription sub) {
-
+        Log.i("Location",String.valueOf(subList.size()));
         subList.set(i, sub);
         try {
             FileOutputStream fos = openFileOutput("sub.sav",
@@ -149,6 +150,8 @@ public class EditActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(),
                         "Subscription Updated", Toast.LENGTH_SHORT);
                 toast.show();
+                Intent intent = new Intent(this, DisplayActivity.class);
+                startActivity(intent);
             } else {
             /* Error Message */
                 Toast toast = Toast.makeText(getApplicationContext(),
@@ -177,10 +180,13 @@ public class EditActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(getApplicationContext(),
                     "Subscription Deleted", Toast.LENGTH_SHORT);
             toast.show();
+            Intent intent = new Intent(this, DisplayActivity.class);
+            startActivity(intent);
         } catch (FileNotFoundException e) {
             throw new RuntimeException();
         }  catch (IOException e) {
             throw new RuntimeException();
+
         }
     }
 

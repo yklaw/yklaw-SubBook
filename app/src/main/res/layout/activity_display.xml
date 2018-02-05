@@ -16,8 +16,8 @@
 
     <ListView
         android:id="@+id/subList"
-        android:layout_width="382dp"
-        android:layout_height="481dp"
+        android:layout_width="0dp"
+        android:layout_height="379dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
@@ -30,10 +30,29 @@
     <TextView
         android:id="@+id/chargeText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Total Monthly Charge : $0"
-        app:layout_constraintTop_toBottomOf="@+id/subList"
-        tools:layout_editor_absoluteX="126dp" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subList" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:onClick="addSub"
+        android:text="Add New Subscription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chargeText" />
 
 </android.support.constraint.ConstraintLayout>
